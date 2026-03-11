@@ -1,6 +1,8 @@
 [h1]ScreenZ[/h1]
 Customized screens used on The Old Republic server (Isle of The Dead - Livonia).
 
+[img]https://img.shields.io/badge/DayZ-v1.29-6BA539?style=for-the-badge&logo=bohemiainteractive&logoColor=6BA539&labelColor=30363D[/img]
+
 [u]Contains:[/u]
 - Login screen randomized image with mask
 - Loading screen

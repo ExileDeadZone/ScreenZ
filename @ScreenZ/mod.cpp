@@ -7,4 +7,4 @@ logo="ScreenZ\data\logo.paa";
 logoOver="ScreenZ\data\logo.paa";
 action="https://steamcommunity.com/sharedfiles/filedetails/?id=3643948795";
 author="moldypenguins";
-version="1.4";
+version="1.6";

@@ -28,11 +28,320 @@ FrameWidgetClass main_menu_root {
    "src alpha" 1
    "stretch mode" stretch_w_h
   }
+  GridSpacerWidgetClass character_stats_root {
+   visible 1
+   inheritalpha 0
+   ignorepointer 1
+   position 0.05 0.15
+   size 600 400
+   halign right_ref
+   hexactpos 0
+   vexactpos 0
+   hexactsize 1
+   vexactsize 1
+   scaled 1
+   priority 3
+   Padding 0
+   Margin 0
+   "Size To Content V" 1
+   Columns 1
+   Rows 2
+   {
+    ImageWidgetClass character_stats_header {
+     ignorepointer 1
+     color 0 0 0 0.8627
+     position 0 0
+     size 1 40
+     hexactpos 1
+     vexactpos 1
+     hexactsize 0
+     vexactsize 1
+     scaled 0
+     image0 "set:dayz_gui image:inv_header_1"
+     mode blend
+     "src alpha" 1
+     "clamp mode" clamp
+     "stretch mode" none
+     "flip u" 0
+     "flip v" 0
+     filter 1
+     nocache 0
+     {
+      TextWidgetClass character_stats_text {
+       inheritalpha 0
+       ignorepointer 1
+       position 0 0
+       size 1 40
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 1
+       scaled 1
+       style Normal
+       text "#main_menu_statistics"
+       font "gui/fonts/amorserifpro28"
+       "exact text" 0
+       "size to text v" 0
+       "text halign" center
+       "text valign" center
+      }
+     }
+    }
+    GridSpacerWidgetClass character_stats_content {
+     ignorepointer 1
+     color 0 0 0 0.6275
+     position 0 0
+     size 1 300
+     hexactpos 1
+     vexactpos 1
+     hexactsize 0
+     vexactsize 1
+     scaled 1
+     style Colorable
+     Padding 5
+     Margin 10
+     Columns 2
+     {
+      GridSpacerWidgetClass TimeSurvived {
+       ignorepointer 1
+       position 0 0
+       size 1 1
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 0
+       "Size To Content V" 1
+       Columns 1
+       Rows 2
+       {
+        TextWidgetClass TimeSurvivedValue {
+         ignorepointer 1
+         position 0 0
+         size 1 0.7
+         halign right_ref
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 0
+         vexactsize 0
+         text "3h 45m 10s"
+         font "gui/fonts/metronbook28"
+         "size to text h" 0
+         "size to text v" 0
+         "text halign" center
+         "text valign" center
+        }
+        TextWidgetClass TimeSurvivedLabel {
+         ignorepointer 1
+         position 0 0
+         size 1 0.3
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 0
+         vexactsize 0
+         scaled 1
+         text "#main_menu_time"
+         font "gui/fonts/metronlight14"
+         "size to text h" 0
+         "size to text v" 0
+         "text halign" center
+         "text valign" center
+        }
+       }
+      }
+      GridSpacerWidgetClass DistanceTraveled {
+       ignorepointer 1
+       position 0 0
+       size 1 1
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 0
+       "Size To Content V" 1
+       Columns 1
+       Rows 2
+       {
+        TextWidgetClass DistanceTraveledValue {
+         ignorepointer 1
+         size 1 0.7
+         halign right_ref
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 0
+         vexactsize 0
+         text "2452km"
+         font "gui/fonts/metronbook28"
+         "size to text h" 1
+         "size to text v" 0
+         "text halign" center
+         "text valign" center
+        }
+        TextWidgetClass DistanceTraveledLabel {
+         ignorepointer 1
+         size 1 0.3
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 0
+         vexactsize 0
+         text "#main_menu_distance_foot"
+         font "gui/fonts/metronlight14"
+         "size to text h" 1
+         "size to text v" 0
+         "text halign" center
+         "text valign" center
+        }
+       }
+      }
+      GridSpacerWidgetClass PlayersKilled {
+       ignorepointer 1
+       position 0 0
+       size 1 1
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 0
+       "Size To Content V" 1
+       Columns 1
+       Rows 2
+       {
+        TextWidgetClass PlayersKilledValue {
+         ignorepointer 1
+         position 0 0
+         size 1 0.7
+         halign right_ref
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 0
+         vexactsize 0
+         text "9001"
+         font "gui/fonts/metronbook28"
+         "size to text h" 1
+         "size to text v" 0
+         "text halign" center
+         "text valign" center
+        }
+        TextWidgetClass PlayersKilledLabel {
+         ignorepointer 1
+         size 1 0.3
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 0
+         vexactsize 0
+         text "#main_menu_players_killed"
+         font "gui/fonts/metronlight14"
+         "size to text h" 0
+         "size to text v" 0
+         "text halign" center
+         "text valign" center
+        }
+       }
+      }
+      GridSpacerWidgetClass InfectedKilled {
+       ignorepointer 1
+       position 0 0
+       size 1 1
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 0
+       "Size To Content V" 1
+       Columns 1
+       Rows 2
+       {
+        TextWidgetClass InfectedKilledValue {
+         ignorepointer 1
+         size 1 0.7
+         halign right_ref
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 0
+         vexactsize 0
+         text "56k"
+         "size to text h" 1
+         "size to text v" 0
+         "text halign" center
+         "text valign" center
+        }
+        TextWidgetClass InfectedKilledLabel {
+         ignorepointer 1
+         size 1 0.3
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 0
+         vexactsize 0
+         text "#main_menu_infected_killed"
+         font "gui/fonts/metronlight14"
+         "size to text h" 1
+         "size to text v" 0
+         "text halign" center
+         "text valign" center
+        }
+       }
+      }
+      GridSpacerWidgetClass LongRangeShot {
+       ignorepointer 1
+       position 0 0
+       size 1 1
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 0
+       "Size To Content V" 1
+       Columns 1
+       Rows 2
+       {
+        TextWidgetClass LongRangeShotValue {
+         ignorepointer 1
+         position 0 0
+         size 1 0.7
+         halign right_ref
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 0
+         vexactsize 0
+         text "732m"
+         font "gui/fonts/metronbook28"
+         "size to text h" 1
+         "size to text v" 0
+         "text halign" center
+         "text valign" center
+        }
+        TextWidgetClass LongRangeShotLabel {
+         ignorepointer 1
+         size 1 0.3
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 0
+         vexactsize 0
+         text "#main_menu_long_range_hit_player"
+         font "gui/fonts/metronlight14"
+         "size to text h" 1
+         "size to text v" 0
+         "text halign" center
+         "text valign" center
+        }
+       }
+      }
+     }
+    }
+   }
+  }
   WrapSpacerWidgetClass play_panel_root {
    visible 1
    ignorepointer 1
-   position 0.05 0.25
-   size 500 500
+   color 0 0 0 0.6275
+   position 0.05 0.15
+   size 600 220
    halign right_ref
    valign bottom_ref
    hexactpos 0
@@ -47,9 +356,10 @@ FrameWidgetClass main_menu_root {
    {
     WrapSpacerWidgetClass bottom {
      visible 1
-     color 0 0 0 0.549
+     inheritalpha 1
+     color 0 0 0 0
      position 0 0
-     size 1 100
+     size 1 90
      halign center_ref
      valign bottom_ref
      hexactpos 1
@@ -70,7 +380,7 @@ FrameWidgetClass main_menu_root {
       ButtonWidgetClass play {
        color 0 0 0 0
        position 0 0
-       size 1 100
+       size 1 90
        halign center_ref
        valign bottom_ref
        hexactpos 1
@@ -128,10 +438,11 @@ FrameWidgetClass main_menu_root {
      style rover_sim_colorable
     }
     WrapSpacerWidgetClass top {
+     inheritalpha 1
      ignorepointer 1
-     color 0 0 0 0.549
+     color 0 0 0 0
      position 0 0
-     size 1 60
+     size 1 48
      hexactpos 1
      vexactpos 1
      hexactsize 0
@@ -246,7 +557,7 @@ FrameWidgetClass main_menu_root {
        visible 1
        ignorepointer 0
        position 0 0
-       size 1 60
+       size 1 38
        halign center_ref
        valign bottom_ref
        hexactpos 1
@@ -326,17 +637,18 @@ FrameWidgetClass main_menu_root {
          }
         }
         TextWidgetClass character_name_text {
-         clipchildren 1
+         clipchildren 0
          inheritalpha 1
          ignorepointer 1
-         size 1 0.55
+         position 0 0
+         size 1 0.8
          halign center_ref
          valign center_ref
          hexactpos 1
          vexactpos 1
          hexactsize 0
          vexactsize 0
-         font "gui/fonts/sdf_MetronLight24"
+         font "gui/fonts/metronlight22"
          "exact text" 0
          "text halign" center
          "text valign" center
@@ -347,7 +659,7 @@ FrameWidgetClass main_menu_root {
        visible 1
        color 0 0 0 1
        position 0 0
-       size 1 50
+       size 1 38
        halign center_ref
        valign bottom_ref
        hexactpos 1
@@ -393,7 +705,7 @@ FrameWidgetClass main_menu_root {
       ButtonWidgetClass choose_server {
        color 0 0 0 1
        position 0 0
-       size 1 50
+       size 1 40
        halign center_ref
        valign bottom_ref
        hexactpos 1
@@ -448,275 +760,6 @@ FrameWidgetClass main_menu_root {
       }
      }
     }
-    GridSpacerWidgetClass character_stats_root {
-     visible 1
-     ignorepointer 1
-     position 0 0
-     size 400 500
-     halign center_ref
-     hexactpos 1
-     vexactpos 1
-     hexactsize 1
-     vexactsize 1
-     priority 3
-     Padding 0
-     Margin 0
-     "Size To Content V" 1
-     Columns 1
-     Rows 2
-     {
-      ImageWidgetClass character_stats_header {
-       ignorepointer 1
-       color 0 0 0 0.8627
-       position 0 0
-       size 1 52
-       hexactpos 1
-       vexactpos 1
-       hexactsize 0
-       vexactsize 1
-       image0 "set:dayz_gui image:inv_header_1"
-       mode blend
-       "src alpha" 1
-       "clamp mode" clamp
-       "stretch mode" stretch_w_h
-       "flip u" 0
-       "flip v" 0
-       filter 1
-       nocache 0
-       {
-        TextWidgetClass character_stats_text {
-         ignorepointer 1
-         size 1 30
-         valign center_ref
-         hexactpos 1
-         vexactpos 1
-         hexactsize 0
-         vexactsize 1
-         style Normal
-         text "#main_menu_statistics"
-         font "gui/fonts/sdf_MetronLight42"
-         "exact text" 1
-         "exact text size" 22
-         "text halign" center
-         "text valign" center
-        }
-       }
-      }
-      GridSpacerWidgetClass character_stats_content {
-       ignorepointer 1
-       color 0 0 0 0.549
-       position 0 36
-       size 1 0
-       hexactpos 1
-       vexactpos 1
-       hexactsize 0
-       vexactsize 1
-       style DayZDefaultPanelSides
-       Padding 4
-       Margin 6
-       "Size To Content V" 1
-       Columns 1
-       Rows 5
-       {
-        FrameWidgetClass TimeSurvived {
-         ignorepointer 1
-         position 0 0
-         size 48 30
-         hexactpos 1
-         vexactpos 1
-         hexactsize 1
-         vexactsize 1
-         {
-          TextWidgetClass TimeSurvivedLabel {
-           ignorepointer 1
-           size 1 1
-           valign center_ref
-           hexactpos 1
-           vexactpos 1
-           hexactsize 0
-           vexactsize 0
-           text "#main_menu_time"
-           "size to text h" 1
-           "size to text v" 0
-           "text halign" center
-           "text valign" center
-          }
-          TextWidgetClass TimeSurvivedValue {
-           ignorepointer 1
-           size 1 1
-           halign right_ref
-           valign center_ref
-           hexactpos 1
-           vexactpos 1
-           hexactsize 0
-           vexactsize 0
-           "size to text h" 1
-           "size to text v" 0
-           "text halign" center
-           "text valign" center
-          }
-         }
-        }
-        FrameWidgetClass PlayersKilled {
-         ignorepointer 1
-         position 0 0
-         size 48 30
-         hexactpos 1
-         vexactpos 1
-         hexactsize 1
-         vexactsize 1
-         {
-          TextWidgetClass PlayersKilledLabel {
-           ignorepointer 1
-           size 1 1
-           valign center_ref
-           hexactpos 1
-           vexactpos 1
-           hexactsize 0
-           vexactsize 0
-           text "#main_menu_players_killed"
-           "size to text h" 1
-           "size to text v" 0
-           "text halign" center
-           "text valign" center
-          }
-          TextWidgetClass PlayersKilledValue {
-           ignorepointer 1
-           size 1 1
-           halign right_ref
-           valign center_ref
-           hexactpos 1
-           vexactpos 1
-           hexactsize 0
-           vexactsize 0
-           "size to text h" 1
-           "size to text v" 0
-           "text halign" center
-           "text valign" center
-          }
-         }
-        }
-        FrameWidgetClass InfectedKilled {
-         ignorepointer 1
-         position 0 0
-         size 48 30
-         hexactpos 1
-         vexactpos 1
-         hexactsize 1
-         vexactsize 1
-         {
-          TextWidgetClass InfectedKilledLabel {
-           ignorepointer 1
-           size 1 1
-           valign center_ref
-           hexactpos 1
-           vexactpos 1
-           hexactsize 0
-           vexactsize 0
-           text "#main_menu_infected_killed"
-           "size to text h" 1
-           "size to text v" 0
-           "text halign" center
-           "text valign" center
-          }
-          TextWidgetClass InfectedKilledValue {
-           ignorepointer 1
-           size 1 1
-           halign right_ref
-           valign center_ref
-           hexactpos 1
-           vexactpos 1
-           hexactsize 0
-           vexactsize 0
-           "size to text h" 1
-           "size to text v" 0
-           "text halign" center
-           "text valign" center
-          }
-         }
-        }
-        FrameWidgetClass DistanceTraveled {
-         ignorepointer 1
-         position 0 0
-         size 48 30
-         hexactpos 1
-         vexactpos 1
-         hexactsize 1
-         vexactsize 1
-         {
-          TextWidgetClass DistanceTraveledLabel {
-           ignorepointer 1
-           size 1 1
-           valign center_ref
-           hexactpos 1
-           vexactpos 1
-           hexactsize 0
-           vexactsize 0
-           text "#main_menu_distance_foot"
-           "size to text h" 1
-           "size to text v" 0
-           "text halign" center
-           "text valign" center
-          }
-          TextWidgetClass DistanceTraveledValue {
-           ignorepointer 1
-           size 1 1
-           halign right_ref
-           valign center_ref
-           hexactpos 1
-           vexactpos 1
-           hexactsize 0
-           vexactsize 0
-           "size to text h" 1
-           "size to text v" 0
-           "text halign" center
-           "text valign" center
-          }
-         }
-        }
-        FrameWidgetClass LongRangeShot {
-         ignorepointer 1
-         position 0 0
-         size 48 30
-         hexactpos 1
-         vexactpos 1
-         hexactsize 1
-         vexactsize 1
-         {
-          TextWidgetClass LongRangeShotLabel {
-           ignorepointer 1
-           size 1 1
-           valign center_ref
-           hexactpos 1
-           vexactpos 1
-           hexactsize 0
-           vexactsize 0
-           text "#main_menu_long_range_hit_player"
-           "size to text h" 1
-           "size to text v" 0
-           "text halign" center
-           "text valign" center
-          }
-          TextWidgetClass LongRangeShotValue {
-           ignorepointer 1
-           size 1 1
-           halign right_ref
-           valign center_ref
-           hexactpos 1
-           vexactpos 1
-           hexactsize 0
-           vexactsize 0
-           "size to text h" 1
-           "size to text v" 0
-           "text halign" center
-           "text valign" center
-          }
-         }
-        }
-       }
-      }
-     }
-    }
    }
   }
   PanelWidgetClass character_name_xbox_background {
@@ -755,11 +798,11 @@ FrameWidgetClass main_menu_root {
   }
   FrameWidgetClass settings_panel_root {
    ignorepointer 1
-   position 0.05 0.05
+   position 100 80
    size 290 40
    halign right_ref
-   hexactpos 0
-   vexactpos 0
+   hexactpos 1
+   vexactpos 1
    hexactsize 1
    vexactsize 1
    priority 3
@@ -767,7 +810,7 @@ FrameWidgetClass main_menu_root {
     ButtonWidgetClass tutorial_button {
      visible 1
      color 1 1 1 0
-     position 0.65 0
+     position 0.4 0
      size 37 37
      halign right_ref
      valign center_ref
@@ -783,7 +826,6 @@ FrameWidgetClass main_menu_root {
      switch normal
      {
       ImageWidgetClass tutorial_button_image {
-       visible 1
        ignorepointer 1
        size 1 1
        halign center_ref
@@ -793,41 +835,6 @@ FrameWidgetClass main_menu_root {
        hexactsize 0
        vexactsize 0
        image0 "set:dayz_gui image:tutorials"
-       mode blend
-       "src alpha" 1
-      }
-     }
-    }
-    ButtonWidgetClass message_button {
-     visible 1
-     color 1 1 1 0
-     position 0.4 0
-     size 45 33
-     halign right_ref
-     valign center_ref
-     hexactpos 0
-     vexactpos 1
-     hexactsize 1
-     vexactsize 1
-     fixaspect inside
-     style Empty
-     "no focus" 1
-     "next up" "play"
-     "next down" "customize_character"
-     font "gui/fonts/sdf_MetronLight24"
-     switch normal
-     {
-      ImageWidgetClass message_button_image {
-       visible 1
-       ignorepointer 1
-       size 1 1
-       halign center_ref
-       valign center_ref
-       hexactpos 1
-       vexactpos 1
-       hexactsize 0
-       vexactsize 0
-       image0 "set:dayz_gui image:credits"
        mode blend
        "src alpha" 1
       }
@@ -902,8 +909,44 @@ FrameWidgetClass main_menu_root {
       }
      }
     }
+    ButtonWidgetClass message_button {
+     visible 0
+     disabled 1
+     color 1 1 1 0
+     position 0.6 0
+     size 45 33
+     halign right_ref
+     valign center_ref
+     hexactpos 0
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     fixaspect inside
+     style Empty
+     "no focus" 1
+     "next up" "play"
+     "next down" "customize_character"
+     font "gui/fonts/sdf_MetronLight24"
+     switch normal
+     {
+      ImageWidgetClass message_button_image {
+       ignorepointer 1
+       size 1 1
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 0
+       image0 "set:dayz_gui image:credits"
+       mode blend
+       "src alpha" 1
+      }
+     }
+    }
     ButtonWidgetClass feedback_button {
-     visible 1
+     visible 0
+     disabled 1
      color 1 1 1 0
      position 0.85 0
      size 37 37
@@ -921,7 +964,6 @@ FrameWidgetClass main_menu_root {
      switch normal
      {
       ImageWidgetClass feedback_button_image {
-       visible 1
        ignorepointer 1
        position 0 0
        size 1 1
@@ -944,10 +986,10 @@ FrameWidgetClass main_menu_root {
   ImageWidgetClass dayz_logo {
    visible 1
    ignorepointer 1
-   position 100 78
+   position 0.05 0.05
    size 444 208
-   hexactpos 1
-   vexactpos 1
+   hexactpos 0
+   vexactpos 0
    hexactsize 1
    vexactsize 1
    priority 2
@@ -955,7 +997,27 @@ FrameWidgetClass main_menu_root {
    mode additive
    "src alpha" 1
   }
+  MultilineTextWidgetClass ModdedWarning {
+   visible 0
+   inheritalpha 1
+   position 100 286
+   size 540 29
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   fixaspect outside
+   priority 5
+   text "#str_modded_version_warning0"
+   font "gui/fonts/sdf_MetronLight24"
+   "exact text" 1
+   "exact text size" 20
+   "size to text h" 1
+   "size to text v" 1
+   wrap 1
+  }
   FrameWidgetClass character_rotation_frame {
+   visible 0
    size 0.3 1
    halign center_ref
    valign center_ref
@@ -969,7 +1031,7 @@ FrameWidgetClass main_menu_root {
    visible 1
    clipchildren 0
    ignorepointer 1
-   position 0.0589 0.11
+   position 0.05 0.15
    size 540 620
    valign bottom_ref
    hexactpos 0
@@ -977,153 +1039,6 @@ FrameWidgetClass main_menu_root {
    hexactsize 1
    vexactsize 1
    priority 5
-  }
-  PanelWidgetClass last_server_info {
-   visible 1
-   ignorepointer 1
-   color 0.0078 0.0078 0.0078 0.0392
-   position 0.05 0.15
-   size 350 90
-   halign right_ref
-   valign bottom_ref
-   hexactpos 0
-   vexactpos 0
-   hexactsize 1
-   vexactsize 1
-   priority 3
-   style DayZDefaultPanel
-   "no focus" 1
-   {
-    PanelWidgetClass PanelWidget0 {
-     inheritalpha 1
-     ignorepointer 1
-     position 0 0
-     size 1 20
-     hexactpos 1
-     vexactpos 1
-     hexactsize 0
-     vexactsize 1
-     {
-      TextWidgetClass last_server_info_label {
-       visible 1
-       clipchildren 1
-       inheritalpha 1
-       ignorepointer 1
-       size 1 0.8
-       valign center_ref
-       hexactpos 1
-       vexactpos 1
-       hexactsize 0
-       vexactsize 0
-       text "#layout_main_menu_last_server"
-       font "gui/fonts/sdf_MetronLight24"
-       "text offset" 5 0
-       "exact text" 0
-       "exact text size" 16
-       "size to text h" 0
-       "size to text v" 1
-       "text valign" center
-      }
-     }
-    }
-    PanelWidgetClass PanelWidget1 {
-     inheritalpha 1
-     ignorepointer 1
-     position 0 44
-     size 1 20
-     hexactpos 1
-     vexactpos 1
-     hexactsize 0
-     vexactsize 1
-     {
-      TextWidgetClass last_server_info_ip {
-       visible 1
-       clipchildren 1
-       inheritalpha 1
-       ignorepointer 1
-       position 0 0
-       size 1 0.8
-       valign center_ref
-       hexactpos 1
-       vexactpos 1
-       hexactsize 0
-       vexactsize 0
-       font "gui/fonts/sdf_MetronLight24"
-       "text offset" 10 0
-       "exact text" 0
-       "exact text size" 22
-       "size to text h" 0
-       "size to text v" 1
-       "text valign" center
-      }
-     }
-    }
-    PanelWidgetClass PanelWidget2 {
-     inheritalpha 1
-     ignorepointer 1
-     position 0 66
-     size 1 20
-     hexactpos 1
-     vexactpos 1
-     hexactsize 0
-     vexactsize 1
-     {
-      TextWidgetClass last_server_info_port {
-       visible 1
-       clipchildren 1
-       inheritalpha 1
-       ignorepointer 1
-       position 0 0
-       size 1 0.8
-       valign center_ref
-       hexactpos 1
-       vexactpos 1
-       hexactsize 0
-       vexactsize 0
-       font "gui/fonts/sdf_MetronLight24"
-       "text offset" 10 0
-       "exact text" 0
-       "exact text size" 22
-       "size to text h" 0
-       "size to text v" 1
-       "text valign" center
-      }
-     }
-    }
-    PanelWidgetClass PanelWidget3 {
-     inheritalpha 1
-     ignorepointer 1
-     position 0 22
-     size 1 20
-     hexactpos 1
-     vexactpos 1
-     hexactsize 0
-     vexactsize 1
-     {
-      TextWidgetClass last_server_info_name {
-       visible 1
-       clipchildren 1
-       inheritalpha 1
-       ignorepointer 1
-       position 0 0
-       size 1 0.8
-       valign center_ref
-       hexactpos 1
-       vexactpos 1
-       hexactsize 0
-       vexactsize 0
-       text "#players_name"
-       font "gui/fonts/sdf_MetronLight24"
-       "text offset" 10 0
-       "exact text" 0
-       "exact text size" 22
-       "size to text h" 0
-       "size to text v" 1
-       "text valign" center
-      }
-     }
-    }
-   }
   }
   WrapSpacerWidgetClass Licensing {
    clipchildren 0
@@ -1180,7 +1095,7 @@ FrameWidgetClass main_menu_root {
    visible 1
    ignorepointer 0
    color 0 0 0 0.7843
-   position 0 0
+   position 1.41176 0
    size 1 1
    halign center_ref
    valign center_ref
@@ -1201,11 +1116,11 @@ FrameWidgetClass main_menu_root {
    visible 1
    clipchildren 0
    ignorepointer 1
-   position 0.05 0.05
+   position 99.9999 0.05
    size 730 56
    halign right_ref
    valign bottom_ref
-   hexactpos 0
+   hexactpos 1
    vexactpos 0
    hexactsize 1
    vexactsize 1
@@ -1232,6 +1147,158 @@ FrameWidgetClass main_menu_root {
    draggable 0
    scriptclass ""
    style DayZDefaultPanel
+  }
+  PanelWidgetClass last_server_info {
+   visible 1
+   ignorepointer 1
+   color 0 0 0 0.6275
+   position 0.05 400
+   size 600 130
+   halign right_ref
+   valign bottom_ref
+   hexactpos 0
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   priority 3
+   style DayZDefaultPanel
+   "no focus" 1
+   {
+    PanelWidgetClass PanelWidget0 {
+     visible 1
+     clipchildren 1
+     inheritalpha 0
+     ignorepointer 1
+     color 0 0 0 0.8627
+     position 0 0
+     size 1 40
+     hexactpos 1
+     vexactpos 1
+     hexactsize 0
+     vexactsize 1
+     scaled 1
+     style DayZDefaultPanel
+     {
+      TextWidgetClass last_server_info_label {
+       visible 1
+       clipchildren 1
+       inheritalpha 0
+       ignorepointer 1
+       size 1 0.8
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 0
+       text "#layout_main_menu_last_server"
+       font "gui/fonts/etelkatextpro16"
+       "text offset" 25 0
+       "exact text" 0
+       "exact text size" 16
+       "size to text h" 0
+       "size to text v" 1
+       "text valign" center
+      }
+     }
+    }
+    PanelWidgetClass PanelWidget1 {
+     inheritalpha 0
+     ignorepointer 1
+     position 0 75
+     size 1 25
+     hexactpos 1
+     vexactpos 1
+     hexactsize 0
+     vexactsize 1
+     {
+      TextWidgetClass last_server_info_ip {
+       visible 1
+       clipchildren 1
+       inheritalpha 1
+       ignorepointer 1
+       position 0 0
+       size 1 0.8
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 0
+       font "gui/fonts/metronbook16"
+       "text offset" 25 0
+       "exact text" 0
+       "exact text size" 22
+       "size to text h" 0
+       "size to text v" 1
+       "text valign" center
+      }
+     }
+    }
+    PanelWidgetClass PanelWidget2 {
+     inheritalpha 0
+     ignorepointer 1
+     position 0 105
+     size 1 25
+     hexactpos 1
+     vexactpos 1
+     hexactsize 0
+     vexactsize 1
+     {
+      TextWidgetClass last_server_info_port {
+       visible 1
+       clipchildren 1
+       inheritalpha 1
+       ignorepointer 1
+       position 0 0
+       size 1 0.8
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 0
+       font "gui/fonts/metronbook16"
+       "text offset" 25 0
+       "exact text" 0
+       "exact text size" 22
+       "size to text h" 0
+       "size to text v" 1
+       "text valign" center
+      }
+     }
+    }
+    PanelWidgetClass PanelWidget3 {
+     inheritalpha 0
+     ignorepointer 1
+     position 0 45
+     size 1 25
+     hexactpos 1
+     vexactpos 1
+     hexactsize 0
+     vexactsize 1
+     {
+      TextWidgetClass last_server_info_name {
+       visible 1
+       clipchildren 1
+       inheritalpha 1
+       ignorepointer 1
+       position 0 0
+       size 1 0.8
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 0
+       vexactsize 0
+       text "#players_name"
+       font "gui/fonts/metronbook16"
+       "text offset" 25 0
+       "exact text" 0
+       "exact text size" 22
+       "size to text h" 0
+       "size to text v" 1
+       "text valign" center
+      }
+     }
+    }
+   }
   }
  }
 }

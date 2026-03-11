@@ -2,75 +2,73 @@
 
 modded class LoadingScreen
 {
+  // Loading screen images
+  private const ref array<string> m_LoadScreenImages={
+    "{066E89212856E322}ScreenZ/gui/textures/loading_screens/loading_screen_1_co.edds",
+    "{0870CD6915A1ECF8}ScreenZ/gui/textures/loading_screens/loading_screen_2_co.edds",
+    "{0D850EAEFEF3164E}ScreenZ/gui/textures/loading_screens/loading_screen_3_co.edds",
+    "{144C45F96E4FF34C}ScreenZ/gui/textures/loading_screens/loading_screen_4_co.edds"
+  };
+  // Last loading screen displayed
   private int m_LastLoadScreen = -1;
 
-	void LoadingScreen(DayZGame game)
-	{
-    m_ImageBackground.LoadMaskTexture(SCREENZ_LOAD_MASK);
-    // Fisher-Yates shuffle for Enforce Script
-    Math.Randomize(-1);
-    for (int i=SCREENZ_LOAD_IMAGES.Count() - 1; i > 0; i--)
-    {
-      int j=Math.RandomInt(0, i + 1);
-      string temp=SCREENZ_LOAD_IMAGES[i];
-      SCREENZ_LOAD_IMAGES[i]=SCREENZ_LOAD_IMAGES[j];
-      SCREENZ_LOAD_IMAGES[j]=temp;
-    }
-    NextLoadScreenImage();
-
-		m_ModdedWarning.Show(false);
-		m_ImageLogoMid.Show(false);
-		m_ImageLogoCorner.Show(true);
-		m_ImageWidgetBackground.Show(true);
-		m_Counter=0;
-
-		// lighten up your desktop
-		game.GetBacklit().LoadingAnim();
-		ProgressAsync.SetProgressData(m_ProgressLoading);
-		ProgressAsync.SetUserData(m_ImageBackground);
-	}
-
-  void NextLoadScreenImage()
+  void LoadingScreen(DayZGame game)
   {
-    if (m_LastLoadScreen > SCREENZ_LOAD_IMAGES.Count())
-    {
-      m_LastLoadScreen=0;
-    }
-    else
-    {
-      m_LastLoadScreen++;
-    }
-    m_ImageBackground.LoadImageFile(0, SCREENZ_LOAD_IMAGES[m_LastLoadScreen]);
+    m_ImageBackground.LoadMaskTexture("{EAF8A716BB515212}ScreenZ/gui/textures/loading_screens/loading_screen_mask.edds");
+
+    m_LoadScreenImages.ShuffleArray();
+    int imgcnt = m_LoadScreenImages.Count();
+    for (int i = 0; i < imgcnt; i++) m_ImageBackground.LoadImageFile(i, m_LoadScreenImages[i]);
+
+    SetLoadScreenImage();
+
+    m_ModdedWarning.Show(false);
+    m_ImageLogoMid.Show(false);
+    m_ImageLogoCorner.Show(true);
+    m_ImageWidgetBackground.Show(true);
+    m_Counter=0;
+
+    // lighten up your desktop
+    game.GetBacklit().LoadingAnim();
+    ProgressAsync.SetProgressData(m_ProgressLoading);
+    ProgressAsync.SetUserData(m_ImageBackground);
   }
 
-};
+  void SetLoadScreenImage()
+  {
+    if (m_LastLoadScreen > m_LoadScreenImages.Count()) m_LastLoadScreen=0;
+    else m_LastLoadScreen++;
 
-modded class LoginTimeBase
+    m_ImageBackground.SetImage(m_LastLoadScreen);
+  }
+}
+
+modded class LoginScreenBase
 {
-	void LoginTimeBase()
+  void LoginScreenBase()
   {
-    g_Game.m_loading.NextLoadScreenImage();
+    g_Game.m_loading.SetLoadScreenImage();
   }
-	override Widget Init()
-	{
-    Widget root=super.Init();
-		ImageWidget image=ImageWidget.Cast(root.FindAnyWidget("Background"));
-    image.LoadImageFile(0, SCREENZ_LOGIN_IMAGE);
-		return root;
-	}
-};
+}
 
 modded class LoginQueueBase
 {
-	void LoginQueueBase()
+  override Widget Init()
   {
-    g_Game.m_loading.NextLoadScreenImage();
+    layoutRoot=super.Init();
+		ImageWidget image=ImageWidget.Cast(layoutRoot.FindAnyWidget("Background"));
+    image.LoadImageFile(0, "{0D704C4D21687199}ScreenZ/gui/textures/loading_screens/loading_screen_co.edds");
+		return layoutRoot;
   }
-	override Widget Init()
-	{
-    Widget root=super.Init();
-		ImageWidget image=ImageWidget.Cast(root.FindAnyWidget("Background"));
-    image.LoadImageFile(0, SCREENZ_LOGIN_IMAGE);
-		return root;
-	}
-};
+}
+
+modded class LoginTimeBase
+{
+  override Widget Init()
+  {
+    layoutRoot=super.Init();
+		ImageWidget image=ImageWidget.Cast(layoutRoot.FindAnyWidget("Background"));
+    image.LoadImageFile(0, "{0D704C4D21687199}ScreenZ/gui/textures/loading_screens/loading_screen_co.edds");
+		return layoutRoot;
+  }
+}
