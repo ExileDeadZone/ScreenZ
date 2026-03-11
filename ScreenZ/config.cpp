@@ -26,7 +26,7 @@ class CfgMods
     credits="moldypenguins";
     author="moldypenguins";
     authorID="76561198312711389";
-    version="1.6";
+    version="1.7";
     type="mod";
     dependencies[]={ "Game", "Mission" };
     class defs

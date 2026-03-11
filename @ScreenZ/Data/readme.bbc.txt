@@ -12,10 +12,10 @@ Customized screens used on The Old Republic server (Isle of The Dead - Livonia).
 [i]Make your own. View the source code on GitHub. If you need help, find me on the Isle of The Dead Discord server.[/i]
 
 [h2]GITHUB:[/h2]
-[url=https://github.com/IsleOfTheDead/LoadingScreens]https://github.com/IsleOfTheDead/LoadingScreens[/url]
+[url=https://github.com/ExileDeadZone/LoadingScreens]https://github.com/ExileDeadZone/LoadingScreens[/url]
 
 [h2]CONTACT:[/h2]
-[url=https://discord.gg/isleofthedead][img]https://raw.githubusercontent.com/IsleOfTheDead/.github/main/images/discord.png[/img][/url]
+[url=https://discord.gg/ExileDeadZone][img]https://raw.githubusercontent.com/ExileDeadZone/.github/main/images/discord.png[/img][/url]
 
 [h2]LEGAL:[/h2]
 [b]NO UNPACKING/REPACKING/REPUBLISHING.[/b]
